@@ -1,29 +1,169 @@
 {
   "users": [
-    { "id": "1",
-        "name": "John",
-        "surname": "Doe",
-        "email": "john.doe@email.com", 
-        "issuedBook": "1", 
-        "issuedDate": "04/01/2022", 
-        "returnDate": "05/01/2022", 
-        "subscriptionType": "Premium", 
-        "subscriptionDate": "04/01/2022" 
-    },
-
-    { "id": "2", "name": "Jane", "surname": "Doe", "email": "jane.doe@email.com", "issuedBook": "2", "issuedDate": "01/07/2021", "returnDate": "01/10/2021", "subscriptionType": "Basic", "subscriptionDate": "01/01/2021" },
-    { "id": "3", "name": "Alice", "surname": "Smith", "email": "alice.s@provider.net", "issuedBook": "5", "issuedDate": "12/10/2023", "returnDate": "12/24/2023", "subscriptionType": "Standard", "subscriptionDate": "06/15/2023" },
-    { "id": "4", "name": "Bob", "surname": "Johnson", "email": "bobby.j@webmail.com", "issuedBook": "8", "issuedDate": "02/14/2024", "returnDate": "02/28/2024", "subscriptionType": "Premium", "subscriptionDate": "01/10/2024" },
-    { "id": "5", "name": "Charlie", "surname": "Brown", "email": "charlie.b@coolmail.com", "issuedBook": "12", "issuedDate": "05/20/2023", "returnDate": "06/03/2023", "subscriptionType": "Basic", "subscriptionDate": "05/01/2023" },
-    { "id": "6", "name": "Diana", "surname": "Prince", "email": "diana.p@themis.org", "issuedBook": "25", "issuedDate": "11/05/2023", "returnDate": "11/19/2023", "subscriptionType": "Premium", "subscriptionDate": "10/01/2023" },
-    { "id": "7", "name": "Ethan", "surname": "Hunt", "email": "e.hunt@mission.com", "issuedBook": "14", "issuedDate": "08/12/2023", "returnDate": "08/26/2023", "subscriptionType": "Standard", "subscriptionDate": "02/20/2023" },
-    { "id": "8", "name": "Fiona", "surname": "Gallagher", "email": "fiona.g@southside.com", "issuedBook": "3", "issuedDate": "03/30/2024", "returnDate": "04/13/2024", "subscriptionType": "Basic", "subscriptionDate": "03/15/2024" },
-    { "id": "9", "name": "George", "surname": "Miller", "email": "g.miller@outlook.com", "issuedBook": "21", "issuedDate": "09/18/2023", "returnDate": "10/02/2023", "subscriptionType": "Standard", "subscriptionDate": "01/05/2023" },
-    { "id": "10", "name": "Hannah", "surname": "Abbott", "email": "h.abbott@hogwarts.edu", "issuedBook": "6", "issuedDate": "07/04/2023", "returnDate": "07/18/2023", "subscriptionType": "Premium", "subscriptionDate": "12/12/2022" },
-    { "id": "11", "name": "Ian", "surname": "Wright", "email": "ian.wright@fastmail.com", "issuedBook": "19", "issuedDate": "10/31/2023", "returnDate": "11/14/2023", "subscriptionType": "Basic", "subscriptionDate": "09/20/2023" },
-    { "id": "12", "name": "Julia", "surname": "Roberts", "email": "j.roberts@cinema.com", "issuedBook": "17", "issuedDate": "06/10/2023", "returnDate": "06/24/2023", "subscriptionType": "Standard", "subscriptionDate": "05/15/2023" },
-    { "id": "13", "name": "Kevin", "surname": "Hart", "email": "k.hart@comedy.net", "issuedBook": "4", "issuedDate": "01/15/2024", "returnDate": "01/29/2024", "subscriptionType": "Premium", "subscriptionDate": "01/01/2024" },
-    { "id": "14", "name": "Laura", "surname": "Palmer", "email": "l.palmer@twinpeaks.tv", "issuedBook": "15", "issuedDate": "04/22/2023", "returnDate": "05/06/2023", "subscriptionType": "Basic", "subscriptionDate": "03/10/2023" },
-    { "id": "15", "name": "Mike", "surname": "Wazowski", "email": "mike.w@monsters.inc", "issuedBook": "10", "issuedDate": "02/02/2024", "returnDate": "02/16/2024", "subscriptionType": "Standard", "subscriptionDate": "11/11/2023" }
+    {
+            "id": "1",
+            "name": "John",
+            "surname": "Doe",
+            "email": "john.doe@email.com",
+            "issuedBook": "1",
+            "issuedDate": "04/01/2022",
+            "returnDate": "05/01/2022",
+            "subscriptionType": "Premium",
+            "subscriptionDate": "04/01/2022"
+        },
+        {
+            "id": "2",
+            "name": "Jane",
+            "surname": "Doe",
+            "email": "jane.doe@email.com",
+            "issuedBook": "2",
+            "issuedDate": "01/07/2021",
+            "returnDate": "01/10/2021",
+            "subscriptionType": "Basic",
+            "subscriptionDate": "01/01/2021"
+        },
+        {
+            "id": "3",
+            "name": "Alice",
+            "surname": "Smith",
+            "email": "alice.s@provider.net",
+            "issuedBook": "5",
+            "issuedDate": "12/10/2023",
+            "returnDate": "12/24/2023",
+            "subscriptionType": "Standard",
+            "subscriptionDate": "06/15/2023"
+        },
+        {
+            "id": "4",
+            "name": "Bob",
+            "surname": "Johnson",
+            "email": "bobby.j@webmail.com",
+            "issuedBook": "8",
+            "issuedDate": "02/14/2024",
+            "returnDate": "02/28/2024",
+            "subscriptionType": "Premium",
+            "subscriptionDate": "01/10/2024"
+        },
+        {
+            "id": "5",
+            "name": "Charlie",
+            "surname": "Brown",
+            "email": "charlie.b@coolmail.com",
+            "issuedBook": "12",
+            "issuedDate": "05/20/2023",
+            "returnDate": "06/03/2023",
+            "subscriptionType": "Basic",
+            "subscriptionDate": "05/01/2023"
+        },
+        {
+            "id": "6",
+            "name": "Diana",
+            "surname": "Prince",
+            "email": "diana.p@themis.org",
+            "issuedBook": "25",
+            "issuedDate": "11/05/2023",
+            "returnDate": "11/19/2023",
+            "subscriptionType": "Premium",
+            "subscriptionDate": "10/01/2023"
+        },
+        {
+            "id": "7",
+            "name": "Ethan",
+            "surname": "Hunt",
+            "email": "e.hunt@mission.com",
+            "issuedBook": "14",
+            "issuedDate": "08/12/2023",
+            "returnDate": "08/26/2023",
+            "subscriptionType": "Standard",
+            "subscriptionDate": "02/20/2023"
+        },
+        {
+            "id": "8",
+            "name": "Fiona",
+            "surname": "Gallagher",
+            "email": "fiona.g@southside.com",
+            "issuedBook": "3",
+            "issuedDate": "03/30/2024",
+            "returnDate": "04/13/2024",
+            "subscriptionType": "Basic",
+            "subscriptionDate": "03/15/2024"
+        },
+        {
+            "id": "9",
+            "name": "George",
+            "surname": "Miller",
+            "email": "g.miller@outlook.com",
+            "issuedBook": "21",
+            "issuedDate": "09/18/2023",
+            "returnDate": "10/02/2023",
+            "subscriptionType": "Standard",
+            "subscriptionDate": "01/05/2023"
+        },
+        {
+            "id": "10",
+            "name": "Hannah",
+            "surname": "Abbott",
+            "email": "h.abbott@hogwarts.edu",
+            "issuedBook": "6",
+            "issuedDate": "07/04/2023",
+            "returnDate": "07/18/2023",
+            "subscriptionType": "Premium",
+            "subscriptionDate": "12/12/2022"
+        },
+        {
+            "id": "11",
+            "name": "Ian",
+            "surname": "Wright",
+            "email": "ian.wright@fastmail.com",
+            "issuedBook": "19",
+            "issuedDate": "10/31/2023",
+            "returnDate": "11/14/2023",
+            "subscriptionType": "Basic",
+            "subscriptionDate": "09/20/2023"
+        },
+        {
+            "id": "12",
+            "name": "Julia",
+            "surname": "Roberts",
+            "email": "j.roberts@cinema.com",
+            "issuedBook": "17",
+            "issuedDate": "06/10/2023",
+            "returnDate": "06/24/2023",
+            "subscriptionType": "Standard",
+            "subscriptionDate": "05/15/2023"
+        },
+        {
+            "id": "13",
+            "name": "Kevin",
+            "surname": "Hart",
+            "email": "k.hart@comedy.net",
+            "issuedBook": "4",
+            "issuedDate": "01/15/2024",
+            "returnDate": "01/29/2024",
+            "subscriptionType": "Premium",
+            "subscriptionDate": "01/01/2024"
+        },
+        {
+            "id": "14",
+            "name": "Laura",
+            "surname": "Palmer",
+            "email": "l.palmer@twinpeaks.tv",
+            "issuedBook": "15",
+            "issuedDate": "04/22/2023",
+            "returnDate": "05/06/2023",
+            "subscriptionType": "Basic",
+            "subscriptionDate": "03/10/2023"
+        },
+        {
+            "id": "15",
+            "name": "Mike",
+            "surname": "Wazowski",
+            "email": "mike.w@monsters.inc",
+            "issuedBook": "10",
+            "issuedDate": "02/02/2024",
+            "returnDate": "02/16/2024",
+            "subscriptionType": "Standard",
+            "subscriptionDate": "11/11/2023"
+        }
   ]
 }
