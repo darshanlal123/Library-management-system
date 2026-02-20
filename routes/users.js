@@ -5,7 +5,7 @@ const router = express.Router()
 
 // users 
 /*
-    *   Route : /user/:id
+    *   Route : /user
     *   Method : Get
     *   Description: Get all user list in the system
     *   Assess : public
@@ -51,69 +51,28 @@ router.get("/:id", (req, res)=>{
 */
 
 
-router.post('/', (req, res)=>{
-
-    const {id, name,surname,email,issuedBook,subscriptionType,subscriptionDate}=req.body
-
-    if(!id || !name || !surname || !email || !issuedBook || !subscriptionType || !subscriptionDate){
-        return res.status(400).json({
-            success: false,
-            message: `Please fill all required fields`
-        })
-    }
-
-    const user  = users.find((each)=>each.id === id)
-
-    if (user){
-        return res.status(409).json({
-            success: false,
-            message: `UserID ${id} is already exist`
-        })
-    }
-
-    users.push({id, name,surname,email,issuedBook,subscriptionType,subscriptionDate})
-    res.status(201).json({
-        success: true,
-        message: `User created successfull !!`
-
-    })
-})
-
-/*
-    *   Route : /users/:id
-    *   Method : PUT
-    *   Description: Updating user detail using therire id
-    *   Assess : public
-    *   Parameter : id
-*/
 router.put('/:id', (req, res)=>{
-    const {id} = req.params;                                  //getting id from url
-    const {data} =req.body;                                   //getting all data from form
+    const {id} = req.params;
+    const {data} = req.body;
+
     const user = users.find((each)=> each.id === id);
+
     if(!user){
-        return res.status(409).json({
+        return res.status(404).json({
             success: false,
-            message: `User is not found with id ${id}`
+            message: `User not found with id ${id}`
         })
     }
-    Object.assign(user, data)
-    
-    // with spread oprator 
-    // const updateUser= users.map((each)=>{
-    //     if(each.id===id){
-    //         return{...each, ...data}
-    //     }
-    //     return each
-    // })
-    
-    let updateUser =  users.find((each)=> each.id === id);
+
+    Object.assign(user, data);
+
     res.status(200).json({
         success:true,
-        data : updateUser,
-        message: `User updated successfully `
+        data : user,
+        message: `User updated successfully`
     })
-
 })
+
 
 
 /*
@@ -125,27 +84,25 @@ router.put('/:id', (req, res)=>{
 */  
 router.delete('/:id', (req, res)=>{
     const {id} = req.params;
-    const user = users.find((each)=>each.id ===id);
-    if(!user){
-        return res.status(404).json({
-            success: false,
-            message: "User is not found ${id}"
-        })
-}
-// 1st method 
-const index = users.indexOf(user)
-users.splice(index,1)
 
-// 2nd method 
-const updatedUser = users.filter((each)=> each.id !==id )
+    const index = users.findIndex((each)=> each.id === id);
+
+    if(index === -1){
+        return res.status(404).json({
+            success:false,
+            message:`User not found with id ${id}`
+        })
+    }
+
+    const deletedUser = users.splice(index,1);
 
     res.status(200).json({
-            success: true,
-            // data: users,
-            data: updatedUser,
-            message: "User deleted successfully"        
-        })
+        success:true,
+        data: deletedUser[0],
+        message:"User deleted successfully"
+    })
 })
+
 
 module.exports= router
 
